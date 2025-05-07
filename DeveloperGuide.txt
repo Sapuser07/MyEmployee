@@ -1,0 +1,13 @@
+========================Git Commands=======================
+git init 
+–check the .gitignore
+git add .
+git commit -m “my first stable code”
+Make changes to your files…
+git reset --hard
+
+
+//========================Git Anubhav===========================
+https://github.com/soyuztechnologies/bosch_cap_training1.git
+
+

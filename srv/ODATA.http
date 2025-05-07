@@ -1,0 +1,86 @@
+//### Indicate a new Call
+
+###Get Service: Collection
+http://localhost:4004/odata/v4/CatalogService
+
+###Get Service: MetaData of collection
+http://localhost:4004/odata/v4/CatalogService/$metadata
+
+
+###Get Service: Collection
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet
+
+
+###Get Service: Employee Address
+http://localhost:4004/odata/v4/CatalogService/EmployeeAddSet
+
+###Get Service: Employee: Pagination 
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet?$top=2&$skip=2
+
+###Get Service: Employee: Count 
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet/$count
+
+###Get Service: Employee: Single Record by Key
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet/1
+
+
+###Get Service: Employee: Filter 
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet?$filter=modifiedBy eq 'admin'
+
+###Get Service: Employee: Case Filter  
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet?$filter=contains(modifiedBy, 'admin')
+
+
+###POST Service: Employee   ===> Not working
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet
+Content-Type: application/json
+
+{
+      "NODE_KEY": "6",
+      "EmpID": "EMP006",
+      "Name": "Devendra",
+      "Role": "C4C Consultant",
+      "Email": "devsingh.sap@example.com",
+      "Phone": "555-4321",
+      "Department": "C4C",
+      "DOJ": "2019-12-01T00:00:00Z",
+      "Status": null,
+      "AddressGUID_ID": "ADDR004",
+      "SalaryGUID_ID": "SAL004"
+}
+
+###Get the data of new employee - COPY THE ID FROM LAST CALL MANUALLY
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet/5
+
+###PATCH - used to update data
+PATCH http://localhost:4004/odata/v4/CatalogService/EmployeeSet/5
+Content-Type: application/json
+
+{
+    "Role": "Consultant"
+}
+
+
+###DELETE - Remove data from DB
+DELETE http://localhost:4004/odata/v4/CatalogService/EmployeeSet/5
+
+###Test the V2 response :: npm install @cap-js-community/odata-v2-adapter
+http://localhost:4004/odata/v2/CatalogService/EmployeeSet/4
+
+####Lazy loading concept
+http://localhost:4004/odata/v2/CatalogService/EmployeeSet('4')?$expand=AddressGUID
+
+###Get the Address Data
+ http://localhost:4004/odata/v4/CatalogService/EmployeeAddSet/5
+
+
+###Calling the action :: Not working
+POST http://localhost:4004/odata/v4/CatalogService/EmployeeAddSet/boots
+Content-Type: application/json
+
+{
+}
+
+###Call the function
+http://localhost:4004/odata/v4/CatalogService/getLargestOrder()
+

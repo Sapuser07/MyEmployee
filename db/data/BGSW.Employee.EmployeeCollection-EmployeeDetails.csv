@@ -1,0 +1,11 @@
+ID,EmpID,Name,Role,Email,Phone,Department,DOJ,Status,AddressGUID_ID,SalaryGUID_ID,createdAt,createdBy,modifiedAt,modifiedBy
+1,EMP001,John Doe,Software Engineer,john.doe@example.com,555-1234,IT,2022-01-15,Active,ADDR001,SAL001,2022-01-10,admin,2023-01-10,admin
+2,EMP002,Jane Smith,Project Manager,jane.smith@example.com,555-5678,IT,2021-03-22,Active,ADDR002,SAL002,2021-03-20,admin,2023-01-15,admin
+3,EMP003,Bob Johnson,Data Analyst,bob.johnson@example.com,555-8765,Analytics,2020-05-30,Active,ADDR003,SAL003,2020-05-25,admin,2023-01-20,admin
+4,EMP004,Alice Brown,HR Specialist,alice.brown@example.com,555-4321,HR,2019-07-10,Active,ADDR004,SAL004,2019-07-05,admin,2023-01-25,admin
+5,EMP005,Charlie Davis,Marketing Coordinator,charlie.davis@example.com,555-6789,Marketing,2023-02-01,Active,ADDR005,SAL005,2023-01-30,admin,2023-02-05,admin
+6,EMP006,Diana Evans,Sales Executive,diana.evans@example.com,555-3456,Sales,2022-08-15,Active,ADDR006,SAL006,2022-08-10,admin,2023-02-10,admin
+7,EMP007,Edward Wilson,Customer Support,edward.wilson@example.com,555-7890,Support,2021-11-05,Active,ADDR007,SAL007,2021-11-01,admin,2023-02-15,admin
+8,EMP008,Grace Lee,Web Designer,grace.lee@example.com,555-2345,Design,2020-04-20,Active,ADDR008,SAL008,2020-04-15,admin,2023-02-20,admin
+9,EMP009,Hank Miller,Network Administrator,hank.miller@example.com,555-9876,IT,2018-09-12,Active,ADDR009,SAL009,2018-09-10,admin,2023-02-25,admin
+10,EMP010,Ivy Taylor,Content Writer,ivy.taylor@example.com,555-6543,Content,2022-12-01,Active,ADDR010,SAL010,2022-11-30,admin,2023-03-01,admin
