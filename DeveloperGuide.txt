@@ -8,6 +8,5 @@ git reset --hard
 
 
 //========================Git Anubhav===========================
-https://github.com/soyuztechnologies/bosch_cap_training1.git
-
+git clone https://github.com/soyuztechnologies/bosch_cap_training1.git mycapapp
 

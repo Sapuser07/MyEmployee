@@ -5,7 +5,7 @@ namespace BGSW.Query;
 using {
     BGSW.Employee.EmployeeCollection.EmployeeDetails as EmpDetails,
     BGSW.Employee.EmployeeCollection.EmployeeAddress as EmpAddress,
-    BGSW.Employee.EmployeeCollection.Payscale as EmpPayscale,
+    //BGSW.Employee.EmployeeCollection.Payscale as EmpPayscale,
     BGSW.Employee.EmployeeEntryExit.WFOTracking as EntryExit
 } from './Employee';
 
@@ -86,21 +86,21 @@ context CDSViews {
         }
 
 
-    //View-3: For Employee Pay Scale
-    define view ![EmpPayscaleData] as
-        select from EmpPayscale {
-            Employee.EmpID as ![EmployeeID], //Association at run time
-            CurrencyCode   as ![Currency Code],
-            NetSalary,
-            HRA,
-            NPS,
-            Tax,
-            BonusAmount,
-            VariablePay
-        }
-        group by
-            Employee.EmpID,
-            NetSalary,
-            HRA;
+    // //View-3: For Employee Pay Scale
+    // define view ![EmpPayscaleData] as
+    //     select from EmpPayscale {
+    //         Employee.EmpID as ![EmployeeID], //Association at run time
+    //         CurrencyCode   as ![Currency Code],
+    //         NetSalary,
+    //         HRA,
+    //         NPS,
+    //         Tax,
+    //         BonusAmount,
+    //         VariablePay
+    //     }
+    //     group by
+    //         Employee.EmpID,
+    //         NetSalary,
+    //         HRA;
 
 }
