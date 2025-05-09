@@ -62,6 +62,10 @@ service ODATAService @(path: 'CatalogService') {
     entity EmployeeAddSet as projection on EmployeeColl.EmployeeDetails
                              //Instance Bound Action
         actions {
+
+           // @Common.SideEffects: {TargetProperties: ['in/GROSS_AMOUNT'], }
+
+
             action boots() returns EmployeeAddSet;
         }
 //entity EmployeePayscale as projection on EmployeeColl.Payscale; //Employee Payscale

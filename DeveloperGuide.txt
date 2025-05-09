@@ -10,3 +10,8 @@ git reset --hard
 //========================Git Anubhav===========================
 git clone https://github.com/soyuztechnologies/bosch_cap_training1.git mycapapp
 
+
+//=====================How to connect mulitple DB============================
+https://www.youtube.com/@AnubhavOberoy/videos
+https://www.youtube.com/watch?v=zZckRSi9Sy8
+

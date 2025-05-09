@@ -37,7 +37,7 @@ context EmployeeCollection {
         //As per Design, AddressGUID will connect with Primary key (NODE_KEY) of Employee Address table
         //AddressGUID : Association to one EmployeeAddress; //FK Relationship
         AddressGUID : Association to one EmployeeAddress; //FK Relationship
-       // SalaryGUID  : Association to one Payscale; //FK Relationship
+        SalaryGUID  : Association to one Payscale; //FK Relationship
   }
 
 //Table View 1: Employee Address
@@ -55,11 +55,11 @@ context EmployeeCollection {
 
 
 //Table View 1: Employee Payscale
-  // entity Payscale : cuid, managed, Common.Payscale //Common.Payscale imports the aspect structure during runtime
-  // {
-  //   Employee : Association to one EmployeeDetails
-  //                on Employee.SalaryGUID = $self; //Backward Relationship to Employee
-  // }
+  entity Payscale : cuid, managed, Common.Payscale //Common.Payscale imports the aspect structure during runtime
+  {
+    Employee : Association to one EmployeeDetails
+                 on Employee.SalaryGUID = $self; //Backward Relationship to Employee
+  }
 
 }
 
